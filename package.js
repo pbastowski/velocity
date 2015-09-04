@@ -3,7 +3,7 @@
 Package.describe({
   name: 'velocity:core',
   summary: 'Velocity, a Meteor specific test-runner',
-  version: '0.9.3',
+  version: '0.9.4',
   git: 'https://github.com/meteor-velocity/velocity.git',
   debugOnly: true
 });
@@ -24,7 +24,7 @@ Package.on_use(function (api) {
       BOTH = [CLIENT, SERVER];
 
   api.versionsFrom('METEOR@1.1.0.2');
-  api.use('grigio:babel@0.1.6');
+  //api.use('pbastowski:angular');
   api.use('webapp');
   api.use('mongo');
   api.use('check');
@@ -45,7 +45,7 @@ Package.on_use(function (api) {
   api.export('VelocityOptions', BOTH);
 
   api.add_files('src/source_map_support.es6.js', BOTH);
-  api.add_files('src/polyfills.es6.js', BOTH);
+  //api.add_files('src/polyfills.es6.js', BOTH);
   api.add_files('src/globals.es6.js', BOTH);
   api.add_files('src/collections.es6.js', BOTH);
   api.add_files('src/helpers.es6.js', SERVER);
